@@ -41,12 +41,12 @@ export function Differentiator() {
           </p>
         </div>
 
-        <ol className="mt-14 grid gap-5 md:grid-cols-3 md:gap-6 lg:mt-20">
+        <ol className="mt-14 grid gap-5 md:grid-cols-2 md:gap-6 lg:mt-20 lg:grid-cols-3">
           {sheets.map((s, i) => (
             <li
               key={s.title}
               className={`sheet flex flex-col px-6 pb-6 pt-10 text-ink md:px-7 md:pb-7 md:pt-12 ${
-                i === 1 ? "md:translate-y-8" : i === 2 ? "md:translate-y-16" : ""
+                i === 1 ? "lg:translate-y-8" : i === 2 ? "md:col-span-2 lg:col-span-1 lg:translate-y-16" : ""
               }`}
             >
               <span className="font-display text-[28px] font-semibold leading-none text-pewter" aria-hidden>
@@ -60,7 +60,7 @@ export function Differentiator() {
             </li>
           ))}
         </ol>
-        <div className="hidden md:block md:h-16" aria-hidden />
+        <div className="hidden lg:block lg:h-16" aria-hidden />
       </div>
     </section>
   );

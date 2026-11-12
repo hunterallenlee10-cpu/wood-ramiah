@@ -3,7 +3,7 @@ import { business } from "@/lib/business";
 import { ConsultButton } from "@/components/ui/ConsultButton";
 
 const tab =
-  "flex h-[52px] w-[76px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-[2px] text-navy active:bg-navy/5";
+  "flex h-[52px] w-[64px] shrink-0 min-[360px]:w-[76px] flex-col items-center justify-center gap-0.5 rounded-[2px] text-navy active:bg-navy/5";
 
 /** Mobile only: [Call] [Directions] [Request a Consultation], fixed to the bottom. */
 export function MobileBar() {
@@ -21,7 +21,7 @@ export function MobileBar() {
           <MapPin size={20} strokeWidth={1.5} aria-hidden />
           <span className="text-[13px] font-semibold leading-tight">Directions</span>
         </a>
-        <ConsultButton className="!min-h-[52px] flex-1 whitespace-nowrap !px-3 !text-[16px]">
+        <ConsultButton className="!min-h-[52px] min-w-0 flex-1 !px-3 !text-[16px] !leading-tight min-[360px]:whitespace-nowrap">
           Request a Consultation
         </ConsultButton>
       </div>

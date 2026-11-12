@@ -89,11 +89,11 @@ export function ConversationSheet({ items, onBring, onPrint, idPrefix = "sheet" 
         </p>
       </div>
 
-      <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+      <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
         <button type="button" aria-haspopup="dialog" onClick={onBring} className="btn btn-primary w-full sm:w-auto">
           Bring this list to a consultation
         </button>
-        <button type="button" onClick={onPrint} className="textlink justify-center sm:justify-start">
+        <button type="button" onClick={onPrint} className="textlink justify-center whitespace-nowrap sm:justify-start">
           <Printer size={18} strokeWidth={1.5} aria-hidden />
           Print this list
         </button>

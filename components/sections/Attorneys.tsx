@@ -19,7 +19,7 @@ export function Attorneys() {
             const photo = photos[a.image];
             return (
               <article key={a.id} aria-labelledby={`atty-${a.id}`} className="flex flex-col">
-                <div className="mounted aspect-[4/5] w-full">
+                <div className="mounted aspect-[4/5] w-full md:aspect-[5/4] lg:aspect-[4/5]">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -27,7 +27,7 @@ export function Attorneys() {
                     sizes="(min-width: 1240px) 566px, (min-width: 1024px) 45vw, 100vw"
                     quality={75}
                     className="object-cover"
-                    style={{ objectPosition: "50% 25%" }}
+                    style={{ objectPosition: "50% 20%" }}
                   />
                 </div>
                 <div className="sheet relative z-10 mx-3 -mt-14 px-6 pb-7 pt-10 md:mx-8 md:px-8">
@@ -41,7 +41,7 @@ export function Attorneys() {
 
                   <dl className="mt-6 border-t border-rule">
                     {a.ledger.map((row) => (
-                      <div key={row.label} className="grid gap-1 border-b border-rule py-3 sm:grid-cols-[136px_1fr] sm:gap-5">
+                      <div key={row.label} className="grid gap-1 border-b border-rule py-3 sm:grid-cols-[136px_1fr] sm:gap-5 lg:grid-cols-1 lg:gap-1 xl:grid-cols-[136px_1fr] xl:gap-5">
                         <dt className="smallcaps pt-[3px] text-[12px] text-muted">{row.label}</dt>
                         <dd className="text-[17px] leading-[1.5] text-ink">{row.value}</dd>
                       </div>

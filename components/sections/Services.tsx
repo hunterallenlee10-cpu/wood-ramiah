@@ -16,11 +16,11 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-5">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:mt-16 lg:gap-5 xl:grid-cols-4">
           {/* Large tile: residential settlements, 2x2 */}
           <article
             id="real-estate-residential"
-            className="sheet flex scroll-mt-28 flex-col px-6 pb-7 pt-10 md:col-span-2 md:px-9 md:pb-9 md:pt-12 lg:row-span-2"
+            className="sheet flex scroll-mt-28 flex-col px-6 pb-7 pt-10 md:col-span-2 md:px-9 md:pb-9 md:pt-12 xl:row-span-2"
           >
             <p className="smallcaps text-muted">Real estate · Residential</p>
             <h3 className="mt-3 font-display text-[40px] font-semibold leading-[1.02] text-navy md:text-[52px]">
@@ -100,13 +100,13 @@ export function Services() {
 
           <article
             id="powers-of-attorney"
-            className="sheet flex scroll-mt-28 flex-col gap-3 px-6 pb-5 pt-10 md:col-span-2 md:flex-row md:items-center md:justify-between md:gap-8 md:px-7 lg:col-span-4"
+            className="sheet flex scroll-mt-28 flex-col gap-3 px-6 pb-5 pt-10 md:col-span-2 md:px-7 lg:flex-row lg:items-center lg:justify-between lg:gap-8 xl:col-span-4"
           >
-            <div className="md:flex md:items-baseline md:gap-6">
+            <div className="lg:flex lg:items-baseline lg:gap-6">
               <h3 className="font-display text-[30px] font-semibold leading-[1.08] text-navy">
                 Powers of attorney, <span className="font-medium italic">financial and health care</span>
               </h3>
-              <p className="mt-2 text-ink/85 md:mt-0">So it is written down who would decide for you.</p>
+              <p className="mt-2 text-ink/85 lg:mt-0">So it is written down who would decide for you.</p>
             </div>
             <ConsultButton variant="text" className="shrink-0" prefill={{ matter: "poa", source: "services" }}>
               Start a request about powers of attorney

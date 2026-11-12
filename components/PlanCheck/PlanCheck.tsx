@@ -109,15 +109,15 @@ export function PlanCheck() {
             onClick={() => setDrawerOpen((o) => !o)}
             className="flex min-h-[48px] w-full items-center justify-between px-4 text-left"
           >
-            <span className="font-semibold text-navy">
+            <span className="min-w-0 font-semibold text-navy">
               Your list · {items.length} {items.length === 1 ? "item" : "items"}
-              <span className="ml-2 font-normal text-muted">({answeredCount} of 5 answered)</span>
+              <span className="ml-2 hidden font-normal text-muted min-[360px]:inline">({answeredCount} of 5 answered)</span>
             </span>
             <ChevronUp
               size={20}
               strokeWidth={1.5}
               aria-hidden
-              className={`text-navy transition-transform duration-200 ${drawerOpen ? "rotate-180" : ""}`}
+              className={`shrink-0 text-navy transition-transform duration-200 ${drawerOpen ? "rotate-180" : ""}`}
             />
           </button>
           {drawerOpen && (

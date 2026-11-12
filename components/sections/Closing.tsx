@@ -42,7 +42,7 @@ export function Closing() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[2fr_1fr] lg:gap-16">
+        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[1.45fr_1fr] lg:gap-12 xl:grid-cols-[2fr_1fr] xl:gap-16">
           <div>
             <p className="smallcaps text-muted">Your closing, start to keys</p>
             <ol className="relative mt-6">

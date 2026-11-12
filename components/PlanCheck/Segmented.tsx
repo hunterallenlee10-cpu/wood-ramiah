@@ -59,7 +59,7 @@ export function Segmented({ labelledBy, value, onChange }: Props) {
             tabIndex={i === focusIndex ? 0 : -1}
             onClick={() => onChange(checked ? undefined : a)}
             onKeyDown={(e) => onKey(e, i)}
-            className={`min-h-[46px] rounded-[1px] px-2 text-[17px] font-semibold transition-colors duration-150 ${
+            className={`min-h-[46px] whitespace-nowrap rounded-[1px] px-1 text-[16px] font-semibold min-[360px]:px-2 min-[360px]:text-[17px] transition-colors duration-150 ${
               checked ? "bg-navy text-paper shadow-[0_1px_2px_rgba(21,26,45,0.25)]" : "text-ink/80 hover:bg-navy/[0.06]"
             }`}
           >

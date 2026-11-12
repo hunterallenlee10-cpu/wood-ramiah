@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MapPin, Phone } from "lucide-react";
-import { business, staff } from "@/lib/business";
+import { business } from "@/lib/business";
+import { StaffStrip } from "./StaffStrip";
 import { photos } from "@/lib/images";
 
 export function Office() {
@@ -59,32 +60,7 @@ export function Office() {
           </p>
         </div>
 
-        <ul
-          className="no-scrollbar -mx-5 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 md:-mx-10 md:px-10 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-5 lg:overflow-visible lg:px-0"
-          aria-label="Staff"
-        >
-          {staff.map((p) => {
-            const photo = photos[p.image];
-            return (
-              <li key={p.name} className="w-[68%] shrink-0 snap-start xs:w-[56%] sm:w-[40%] md:w-[30%] lg:w-auto">
-                <div className="mounted aspect-[3/4] w-full">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    sizes="(min-width: 1240px) 216px, (min-width: 1024px) 18vw, (min-width: 768px) 30vw, 68vw"
-                    quality={70}
-                    className="object-cover"
-                    style={{ objectPosition: "50% 22%" }}
-                  />
-                </div>
-                <p className="mt-4 font-display text-[28px] font-semibold leading-none text-navy">{p.name}</p>
-                <p className="smallcaps mt-2 text-[12px] text-muted">{p.role}</p>
-                <p className="mt-2 text-[17px] leading-[1.5] text-ink/85">{p.line}</p>
-              </li>
-            );
-          })}
-        </ul>
+        <StaffStrip />
 
         {/* DRAFT: confirm "most of us grew up here" with the firm. */}
         <p className="mt-12 border-t border-rule pt-6 font-display text-[30px] font-medium italic leading-tight text-navy md:text-[36px]">
