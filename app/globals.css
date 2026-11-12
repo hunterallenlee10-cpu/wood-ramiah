@@ -56,6 +56,9 @@
   .on-navy :focus-visible {
     outline-color: var(--color-paper);
   }
+  .on-navy .sheet :focus-visible {
+    outline-color: var(--color-navy);
+  }
   h1,
   h2,
   h3 {
@@ -296,6 +299,13 @@
   .sig-line,
   .sig-seal {
     animation: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  html[data-pc-drawer] .back-to-top {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 

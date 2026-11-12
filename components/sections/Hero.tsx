@@ -101,7 +101,8 @@ export function Hero() {
               Joann Wood <span className="font-medium italic">&amp;</span> Hadley Ramiah
             </span>
             <span className="smallcaps mt-2 block text-[12px] text-muted">
-              Partners · 23087 Three Notch Road
+              Partners<span className="hidden sm:inline"> · </span>
+              <span className="block sm:inline">23087 Three Notch Road</span>
             </span>
           </figcaption>
         </figure>

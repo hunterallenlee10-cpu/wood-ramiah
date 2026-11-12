@@ -24,7 +24,7 @@ export function BackToTop() {
         window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
         document.getElementById("main")?.focus({ preventScroll: true });
       }}
-      className={`fixed bottom-[92px] right-4 z-30 flex h-12 w-12 items-center justify-center rounded-[2px] border border-rule bg-bond text-navy shadow-[var(--shadow-lift)] transition-[opacity,transform] duration-200 hover:border-navy lg:bottom-8 lg:right-8 print:hidden ${
+      className={`back-to-top fixed bottom-[92px] right-4 z-30 flex h-12 w-12 items-center justify-center rounded-[2px] border border-rule bg-bond text-navy shadow-[var(--shadow-lift)] transition-[opacity,transform] duration-200 hover:border-navy lg:bottom-8 lg:right-8 print:hidden ${
         show ? "opacity-100" : "pointer-events-none translate-y-2 opacity-0"
       }`}
     >

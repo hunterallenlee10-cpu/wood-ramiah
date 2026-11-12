@@ -7,3 +7,5 @@ out
 next-env.d.ts
 /public/images/raw
 /lighthouse
+AGENTS.md
+CLAUDE.md
