@@ -164,7 +164,7 @@ export function PlannerForm({ prefill, headingId, onEditList, inline }: Props) {
 
         {step === 4 && (
           <div className="mt-6 border-t border-rule pt-5">
-            <p className="text-[15px] leading-[1.6] text-muted">{business.notice}</p>
+            <p className="text-[16px] leading-[1.6] text-muted">{business.notice}</p>
             <label className="mt-4 flex cursor-pointer items-start gap-3">
               <input
                 type="checkbox"
@@ -202,7 +202,7 @@ export function PlannerForm({ prefill, headingId, onEditList, inline }: Props) {
             <button type="submit" className="btn btn-primary disabled:cursor-not-allowed disabled:opacity-45" disabled={!s.ack}>
               Send my request
             </button>
-            <span id={`${uid}-ackhint`} className="text-[15px] text-muted">
+            <span id={`${uid}-ackhint`} className="text-[16px] text-muted">
               {s.ack ? "Nothing is sent in this preview." : "Tick the box above to send."}
             </span>
           </div>

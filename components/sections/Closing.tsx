@@ -117,7 +117,7 @@ export function Closing() {
                   sizes="220px"
                   className="h-auto w-[220px] max-w-full"
                 />
-                <figcaption className="mt-2 text-[15px] text-muted">Secure Insight Registered Closing Agent</figcaption>
+                <figcaption className="mt-2 text-[16px] text-muted">Secure Insight Registered Closing Agent</figcaption>
               </figure>
             </div>
           </div>

@@ -121,7 +121,7 @@ export function summaryRows(s: FormState): { label: string; value: string }[] {
   if (s.days.length || s.times.length) rows.push({ label: "When", value: [...s.days, ...s.times].join(", ") });
   if (s.name) rows.push({ label: "Name", value: s.name });
   if (s.phone) rows.push({ label: "Phone", value: s.phone });
-  if (s.callback) rows.push({ label: "Best time to call", value: s.callback });
+  if (s.callback) rows.push({ label: "Preferred callback time", value: s.callback });
   if (s.note) rows.push({ label: "Note", value: s.note });
   return rows;
 }

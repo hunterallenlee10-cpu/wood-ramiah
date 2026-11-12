@@ -307,7 +307,7 @@ export function StepInfo({
       />
       <TextField
         id={`${uid}-cb`}
-        label="Best time to call you back"
+        label="Preferred callback time"
         optional
         placeholder="For example, weekdays after 3"
         value={s.callback}

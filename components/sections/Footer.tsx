@@ -17,7 +17,7 @@ export function Footer() {
             <p className="mt-4 text-muted">{business.tagline}</p>
             <a
               href={phone.href}
-              className="mt-6 block font-display text-[40px] font-semibold leading-none text-navy hover:underline hover:decoration-1 hover:underline-offset-8"
+              className="mt-5 inline-block py-1.5 font-display text-[40px] font-semibold leading-none text-navy hover:underline hover:decoration-1 hover:underline-offset-8"
             >
               {phone.display}
             </a>
@@ -84,11 +84,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 border-t border-rule pt-8 text-[15px] leading-[1.65] text-muted">
+        <div className="mt-14 border-t border-rule pt-8 text-[16px] leading-[1.65] text-muted">
           <p className="measure">{business.notice}</p>
           <p className="mt-4">{business.photoCredit}</p>
           <p className="mt-4">© 2026 {business.name}</p>
-          {!isLive && <p className="mt-2 text-[15px]">Concept preview by Lee Enterprises Unlimited.</p>}
+          {!isLive && <p className="mt-2">Concept preview by Lee Enterprises Unlimited.</p>}
         </div>
       </div>
     </footer>

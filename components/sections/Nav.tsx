@@ -55,7 +55,7 @@ export function Nav() {
           <Wordmark />
         </Link>
 
-        <ul className="hidden items-center lg:flex">
+        <ul className="hidden items-center xl:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
               <Link
@@ -68,7 +68,7 @@ export function Nav() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="ml-auto hidden items-center gap-3 lg:flex xl:ml-0">
           <a
             href={business.phone.href}
             className="flex min-h-[44px] items-center gap-2 px-1 text-[16px] font-semibold text-navy"
@@ -83,7 +83,7 @@ export function Nav() {
         <button
           ref={burgerRef}
           type="button"
-          className="-mr-2 flex h-11 w-11 items-center justify-center text-navy lg:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-navy xl:hidden"
           aria-label="Open menu"
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -100,7 +100,7 @@ export function Nav() {
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className="fixed inset-0 z-50 flex flex-col bg-paper lg:hidden"
+          className="fixed inset-0 z-50 flex flex-col bg-paper xl:hidden"
         >
           <div className="wrap flex h-[68px] items-center justify-between border-b border-rule">
             <Wordmark />

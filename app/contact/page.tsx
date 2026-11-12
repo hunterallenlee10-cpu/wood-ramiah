@@ -132,7 +132,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="wrap mt-12">
-            <p className="measure border-t border-rule pt-6 text-[15px] leading-[1.65] text-muted">{business.notice}</p>
+            <p className="measure border-t border-rule pt-6 text-[16px] leading-[1.65] text-muted">{business.notice}</p>
           </div>
         </section>
 
