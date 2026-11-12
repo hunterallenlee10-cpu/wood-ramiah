@@ -2,7 +2,7 @@ import { ConsultButton } from "@/components/ui/ConsultButton";
 
 export function Services() {
   return (
-    <section aria-labelledby="services-heading" className="section border-y border-rule">
+    <section aria-labelledby="services-heading" className="section border-y border-rule defer-render">
       <div className="wrap">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[40rem]">

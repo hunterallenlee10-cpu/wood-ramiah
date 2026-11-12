@@ -7,14 +7,14 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { PlannerForm } from "@/components/MatterPlanner/PlannerForm";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
-  title: { absolute: "Contact Wood & Ramiah | Real Estate Attorney, California MD" },
+export const metadata: Metadata = pageMeta({
+  title: "Contact Wood & Ramiah | Real Estate Attorney, California MD",
   description:
     "Visit Wood & Ramiah at 23087 Three Notch Road, California, MD. Open Monday to Friday, 9 to 5. Call (301) 737-8882 or request a consultation online today.",
-  alternates: { canonical: "/contact" },
-  openGraph: { url: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   const { address, phone, hours } = business;

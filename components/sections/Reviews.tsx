@@ -5,7 +5,7 @@ import { featuredReview, reviews } from "@/lib/reviews";
 // DRAFT: firm to approve each testimonial for use under the Maryland Attorneys' Rules of Professional Conduct on advertising.
 export function Reviews() {
   return (
-    <section id="reviews" aria-labelledby="reviews-heading" className="section border-t border-rule">
+    <section id="reviews" aria-labelledby="reviews-heading" className="section border-t border-rule defer-render">
       <div className="wrap">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="wrap">
         <div className="grid gap-12 lg:grid-cols-[1.25fr_1fr_1fr_1fr] lg:gap-10">
           <div>
-            <Link href="/" className="inline-flex min-h-[44px] items-center" aria-label="Wood & Ramiah, LLC, home">
+            <Link href="/" className="inline-flex min-h-[44px] items-center">
               <Wordmark size="footer" />
             </Link>
             <p className="mt-4 text-muted">{business.tagline}</p>

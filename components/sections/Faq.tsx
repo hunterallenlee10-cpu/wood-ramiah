@@ -4,7 +4,7 @@ import { faqs } from "@/lib/faq";
 /** Native <details> accordion: works without JavaScript, keyboard and screen reader friendly. */
 export function Faq() {
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="section border-t border-rule">
+    <section id="faq" aria-labelledby="faq-heading" className="section border-t border-rule defer-render">
       <div className="wrap grid gap-10 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
         <div>
           <p className="clause">Questions</p>

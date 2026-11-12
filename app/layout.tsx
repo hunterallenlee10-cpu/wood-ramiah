@@ -5,9 +5,10 @@ import "./globals.css";
 import { SITE_URL, isLive } from "@/lib/site";
 import { business } from "@/lib/business";
 import { PlannerProvider } from "@/components/MatterPlanner/context";
-import { MatterPlanner } from "@/components/MatterPlanner/MatterPlanner";
+import { MatterPlannerLazy } from "@/components/MatterPlanner/Lazy";
 import { MobileBar } from "@/components/sections/MobileBar";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { AnchorFix } from "@/components/ui/AnchorFix";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -60,9 +61,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <MobileBar />
           <BackToTop />
-          <MatterPlanner />
+          <AnchorFix />
+          <MatterPlannerLazy />
         </PlannerProvider>
-        <Analytics />
+        {/* Vercel Analytics only exists on Vercel; elsewhere its script 404s and logs a console error. */}
+        {process.env.VERCEL && <Analytics />}
       </body>
     </html>
   );

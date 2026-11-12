@@ -5,7 +5,7 @@ import { ConsultButton } from "@/components/ui/ConsultButton";
 
 export function Attorneys() {
   return (
-    <section id="attorneys" aria-labelledby="attorneys-heading" className="section">
+    <section id="attorneys" aria-labelledby="attorneys-heading" className="section defer-render">
       <div className="wrap">
         <div className="max-w-[44rem]">
           <p className="clause">The attorneys</p>

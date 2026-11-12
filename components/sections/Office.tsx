@@ -5,7 +5,7 @@ import { photos } from "@/lib/images";
 
 export function Office() {
   return (
-    <section id="team" aria-labelledby="team-heading" className="section border-t border-rule">
+    <section id="team" aria-labelledby="team-heading" className="section border-t border-rule defer-render">
       <div className="wrap">
         <div className="max-w-[46rem]">
           <p className="clause">The office</p>

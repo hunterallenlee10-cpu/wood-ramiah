@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Printer } from "lucide-react";
 import { Monogram } from "@/components/Monogram";
 import { readout, type ListItem } from "@/lib/plan-check";
@@ -12,13 +12,33 @@ type Props = {
   idPrefix?: string;
 };
 
+type Rendered = ListItem & { leaving?: boolean };
+
 /**
  * "Your conversation list": a bond-white document that grows as questions are answered.
  * Motion (2 of 2): each new item fades up 4px over 200ms and a navy hairline draws under it over 300ms.
  */
+
 export function ConversationSheet({ items, onBring, onPrint, idPrefix = "sheet" }: Props) {
-  const reduce = useReducedMotion();
   const count = items.length;
+  // Items present on first render never animate; later additions write on, removals fade out.
+  const initialIds = useRef(new Set(items.map((i) => i.id)));
+  const [rendered, setRendered] = useState<Rendered[]>(items);
+
+  useEffect(() => {
+    const ids = new Set(items.map((i) => i.id));
+    setRendered((prev) => {
+      const next: Rendered[] = [...items];
+      prev.forEach((p, idx) => {
+        if (!ids.has(p.id)) next.splice(Math.min(idx, next.length), 0, { ...p, leaving: true });
+      });
+      return next;
+    });
+    const t = setTimeout(() => setRendered(items), 130);
+    return () => clearTimeout(t);
+  }, [items]);
+
+  let n = 0;
 
   return (
     <div className="sheet px-6 pb-7 pt-10 md:px-9 md:pb-9 md:pt-12">
@@ -34,19 +54,18 @@ export function ConversationSheet({ items, onBring, onPrint, idPrefix = "sheet" 
 
       <div aria-live="polite" aria-relevant="additions removals" aria-labelledby={`${idPrefix}-title`}>
         <ol className="mt-6">
-          <AnimatePresence initial={false}>
-            {items.map((item, i) => (
-              <motion.li
+          {rendered.map((item) => {
+            const animate = !initialIds.current.has(item.id);
+            if (!item.leaving) n += 1;
+            return (
+              <li
                 key={item.id}
-                initial={reduce ? false : { opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={reduce ? { opacity: 0, transition: { duration: 0 } } : { opacity: 0, transition: { duration: 0.12 } }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
-                className="relative py-3.5"
+                aria-hidden={item.leaving || undefined}
+                className={`relative py-3.5 ${item.leaving ? "pc-leave" : animate ? "pc-enter" : ""}`}
               >
                 <div className="flex gap-4">
                   <span className="w-7 shrink-0 pt-[2px] font-display text-[22px] font-semibold leading-none text-navy/70" aria-hidden>
-                    {String(i + 1).padStart(2, "0")}
+                    {item.leaving ? "" : String(n).padStart(2, "0")}
                   </span>
                   <div className="min-w-0">
                     <p className="font-semibold leading-snug text-ink">
@@ -60,16 +79,10 @@ export function ConversationSheet({ items, onBring, onPrint, idPrefix = "sheet" 
                     {item.note && <p className="mt-1 text-[16px] leading-snug text-muted">{item.note}</p>}
                   </div>
                 </div>
-                <motion.span
-                  aria-hidden
-                  className="absolute inset-x-0 bottom-0 h-px origin-left bg-navy/45"
-                  initial={reduce ? false : { scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: reduce ? 0 : 0.05 }}
-                />
-              </motion.li>
-            ))}
-          </AnimatePresence>
+                <span aria-hidden className={`absolute inset-x-0 bottom-0 h-px origin-left bg-navy/45 ${animate ? "pc-rule" : ""}`} />
+              </li>
+            );
+          })}
         </ol>
         <p className="mt-6 border-l-2 border-navy pl-4 font-display text-[26px] font-medium italic leading-[1.2] text-navy">
           {readout(count)}

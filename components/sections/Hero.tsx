@@ -91,7 +91,7 @@ export function Hero() {
               priority
               fetchPriority="high"
               quality={75}
-              sizes="(min-width: 1240px) 520px, (min-width: 1024px) 42vw, (min-width: 600px) 560px, 100vw"
+              sizes="(min-width: 1240px) 520px, (min-width: 1024px) 42vw, (min-width: 600px) 560px, calc(100vw - 40px)"
               className="object-cover"
               style={{ objectPosition: "50% 22%" }}
             />

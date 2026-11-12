@@ -51,7 +51,7 @@ export function Nav() {
       }`}
     >
       <nav aria-label="Main" className="wrap flex h-[68px] items-center justify-between gap-4">
-        <Link href="/" className="-ml-1 flex min-h-[44px] items-center px-1" aria-label="Wood & Ramiah, LLC, home">
+        <Link href="/" className="-ml-1 flex min-h-[44px] items-center px-1">
           <Wordmark />
         </Link>
 

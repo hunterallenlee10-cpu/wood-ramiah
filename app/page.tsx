@@ -14,13 +14,14 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { homeSchema } from "@/lib/schema";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
-  title: { absolute: "Real Estate Attorney in California, MD | Wood & Ramiah" },
+export const metadata: Metadata = pageMeta({
+  title: "Real Estate Attorney in California, MD | Wood & Ramiah",
   description:
     "Wood & Ramiah handles real estate settlements, wills, trusts and probate in California, MD and St. Mary's County. Call (301) 737-8882 or request a consult.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 export default function Home() {
   return (

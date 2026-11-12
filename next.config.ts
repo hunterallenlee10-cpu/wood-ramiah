@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   devIndicators: false,
   images: {
     formats: ["image/webp"],
-    deviceSizes: [375, 640, 750, 828, 1080, 1280, 1600, 2000],
+    deviceSizes: [375, 480, 640, 680, 750, 828, 1080, 1280, 1600, 2000],
     imageSizes: [64, 128, 220, 256, 384],
     qualities: [70, 75, 80],
   },
