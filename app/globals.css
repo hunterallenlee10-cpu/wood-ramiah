@@ -215,6 +215,7 @@
     text-decoration-color: var(--color-navy);
   }
   .textlink svg {
+    flex-shrink: 0;
     transition: transform 160ms ease;
   }
   .textlink:hover svg {

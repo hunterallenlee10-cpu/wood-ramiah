@@ -37,8 +37,8 @@ Nav · Hero · Navy differentiator band · Plan Check (`#estate-planning`) · Cl
 
 - [x] Phase 1: scaffold, design tokens, fonts, the SVG monogram, nav, hero with the signature line, footer
 - [x] Phase 2: differentiator band, Plan Check (all five questions, the live sheet, readout lines, print stylesheet, mobile drawer)
-- [ ] Phase 3: closing roadmap with the wire fraud sheet, services bento
-- [ ] Phase 4: attorney profiles, the office and team strip, seminar band, reviews wall, FAQ, final call-to-action
+- [x] Phase 3: closing roadmap with the wire fraud sheet, services bento
+- [x] Phase 4: attorney profiles, the office and team strip, seminar band, reviews wall, FAQ, final call-to-action
 - [ ] Phase 5: Matter Planner modal, every button wired with the right pre-selects, mobile sticky bar, `/contact` page
 - [ ] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD (validated), robots and sitemap, `llms.txt`, OG image, favicon, 404, image optimisation, `SEO-LAUNCH.md`
 - [ ] Phase 6b: Lighthouse on a production build, both modes, mobile and desktop
