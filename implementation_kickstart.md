@@ -59,3 +59,9 @@ Nav · Hero · Navy differentiator band · Plan Check (`#estate-planning`) · Cl
 - [x] OG image and favicon are the firm's own
 - [x] Lighthouse SEO 100 live mode; other categories 90+; demo mode only fails the indexing audit
 - [x] One h1 per page; titles and descriptions unique and right length; JSON-LD validates and claims nothing untrue
+
+## Deployment
+
+- Vercel project: `wood-ramiah` (team leu). Live demo: https://wood-ramiah.vercel.app
+- Production branch: `main`. Every merge to `main` redeploys the live site. Other branches get preview deployments.
+- No environment variables are set, so the site builds in demo mode. Launch steps are in `SEO-LAUNCH.md`.
