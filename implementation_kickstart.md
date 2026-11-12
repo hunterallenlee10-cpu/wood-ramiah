@@ -35,7 +35,7 @@ Nav · Hero · Navy differentiator band · Plan Check (`#estate-planning`) · Cl
 
 ## Build checklist
 
-- [ ] Phase 1: scaffold, design tokens, fonts, the SVG monogram, nav, hero with the signature line, footer
+- [x] Phase 1: scaffold, design tokens, fonts, the SVG monogram, nav, hero with the signature line, footer
 - [ ] Phase 2: differentiator band, Plan Check (all five questions, the live sheet, readout lines, print stylesheet, mobile drawer)
 - [ ] Phase 3: closing roadmap with the wire fraud sheet, services bento
 - [ ] Phase 4: attorney profiles, the office and team strip, seminar band, reviews wall, FAQ, final call-to-action
