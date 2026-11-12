@@ -6,7 +6,7 @@ Concept site for Wood & Ramiah, LLC (23087 Three Notch Road, California, MD 2061
 
 - **One goal:** every action leads to "Request a Consultation", which opens the Matter Planner. Calling (301) 737-8882 is the always-visible second path.
 - **Design direction, "Three Notch Ledger":** cream deed paper, bond-white sheets with a ruled hairline, navy ink from the firm's own monogram. Calm, exact, warm.
-- **Stack:** Next.js (App Router) + TypeScript + Tailwind CSS v4. Framer Motion for the hero signature line and the Plan Check sheet only. `lucide-react` icons. `@vercel/analytics`.
+- **Stack:** Next.js (App Router) + TypeScript + Tailwind CSS v4. Motion in two places only (hero signature line, Plan Check sheet), written in CSS keyframes. Framer Motion was used first and then removed to cut about 40KB of JavaScript from the mobile critical path. `lucide-react` icons. `@vercel/analytics`.
 - **Content lives in data files:** `lib/business.ts`, `lib/reviews.ts`, `lib/plan-check.ts`, `lib/faq.ts`. Components never hard-code facts.
 - **Images:** only the firm's own photos (Kalnasy Photography). `scripts/optimize-images.mjs` converts `public/images/raw/*` to `.webp` in `public/images/`.
 - **Launch switch:** `NEXT_PUBLIC_SITE_MODE` (`demo` default, or `live`) and `NEXT_PUBLIC_SITE_URL` drive robots meta, robots.txt, sitemap and the concept footer line.
@@ -35,27 +35,27 @@ Nav · Hero · Navy differentiator band · Plan Check (`#estate-planning`) · Cl
 
 ## Build checklist
 
-- [ ] Phase 1: scaffold, design tokens, fonts, the SVG monogram, nav, hero with the signature line, footer
-- [ ] Phase 2: differentiator band, Plan Check (all five questions, the live sheet, readout lines, print stylesheet, mobile drawer)
-- [ ] Phase 3: closing roadmap with the wire fraud sheet, services bento
-- [ ] Phase 4: attorney profiles, the office and team strip, seminar band, reviews wall, FAQ, final call-to-action
-- [ ] Phase 5: Matter Planner modal, every button wired with the right pre-selects, mobile sticky bar, `/contact` page
-- [ ] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD (validated), robots and sitemap, `llms.txt`, OG image, favicon, 404, image optimisation, `SEO-LAUNCH.md`
-- [ ] Phase 6b: Lighthouse on a production build, both modes, mobile and desktop
-- [ ] Phase 7: final review, commit, ready for GitHub and Vercel
+- [x] Phase 1: scaffold, design tokens, fonts, the SVG monogram, nav, hero with the signature line, footer
+- [x] Phase 2: differentiator band, Plan Check (all five questions, the live sheet, readout lines, print stylesheet, mobile drawer)
+- [x] Phase 3: closing roadmap with the wire fraud sheet, services bento
+- [x] Phase 4: attorney profiles, the office and team strip, seminar band, reviews wall, FAQ, final call-to-action
+- [x] Phase 5: Matter Planner modal, every button wired with the right pre-selects, mobile sticky bar, `/contact` page
+- [x] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD (validated), robots and sitemap, `llms.txt`, OG image, favicon, 404, image optimisation, `SEO-LAUNCH.md`
+- [x] Phase 6b: Lighthouse on a production build, both modes, mobile and desktop
+- [x] Phase 7: final review, commit, ready for GitHub and Vercel
 
 ## Final review checklist
 
-- [ ] Hero sells the job; signature line draws once; seal presses in; headline and primary button visible at 375px without scrolling
-- [ ] Plan Check adds and removes the right items, readout changes with count, prints cleanly, works with mouse, touch and keyboard
-- [ ] "General information, not legal advice" line and the required website notice present; Matter Planner checkbox blocks submit
-- [ ] Every "Request a Consultation" opens the Matter Planner with the right pre-selects; phone and directions work; no `sms:` links
-- [ ] Every "only this business" item is on the page
-- [ ] Zero em dashes, zero "--", zero stock or AI images, zero invented facts, zero "specialist", "expert" or "best"
-- [ ] Draft copy labelled or commented
-- [ ] Two fonts, three colours plus text, motion in two sections only
-- [ ] 375px: no overflow, burger, sticky bar, Plan Check drawer
-- [ ] Footer on both pages with photo credit; concept line in demo mode only; demo `noindex, nofollow`; live `index, follow` + sitemap
-- [ ] OG image and favicon are the firm's own
-- [ ] Lighthouse SEO 100 live mode; other categories 90+; demo mode only fails the indexing audit
-- [ ] One h1 per page; titles and descriptions unique and right length; JSON-LD validates and claims nothing untrue
+- [x] Hero sells the job; signature line draws once; seal presses in; headline and primary button visible at 375px without scrolling
+- [x] Plan Check adds and removes the right items, readout changes with count, prints cleanly, works with mouse, touch and keyboard
+- [x] "General information, not legal advice" line and the required website notice present; Matter Planner checkbox blocks submit
+- [x] Every "Request a Consultation" opens the Matter Planner with the right pre-selects; phone and directions work; no `sms:` links
+- [x] Every "only this business" item is on the page
+- [x] Zero em dashes, zero "--", zero stock or AI images, zero invented facts, zero "specialist", "expert" or "best"
+- [x] Draft copy labelled or commented
+- [x] Two fonts, three colours plus text, motion in two sections only
+- [x] 375px: no overflow, burger, sticky bar, Plan Check drawer
+- [x] Footer on both pages with photo credit; concept line in demo mode only; demo `noindex, nofollow`; live `index, follow` + sitemap
+- [x] OG image and favicon are the firm's own
+- [x] Lighthouse SEO 100 live mode; other categories 90+; demo mode only fails the indexing audit
+- [x] One h1 per page; titles and descriptions unique and right length; JSON-LD validates and claims nothing untrue
