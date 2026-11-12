@@ -12,6 +12,8 @@ import { Reviews } from "@/components/sections/Reviews";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
+import { JsonLd } from "@/components/JsonLd";
+import { homeSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: { absolute: "Real Estate Attorney in California, MD | Wood & Ramiah" },
@@ -38,6 +40,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <JsonLd data={homeSchema()} />
     </>
   );
 }

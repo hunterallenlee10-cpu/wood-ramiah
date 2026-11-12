@@ -35,7 +35,7 @@ export const business = {
   directionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=23087+Three+Notch+Road%2C+California%2C+MD+20619",
   mapsEmbedUrl:
-    "https://www.google.com/maps?q=23087+Three+Notch+Road,+California,+MD+20619&output=embed",
+    "https://www.google.com/maps?q=Wood+%26+Ramiah,+LLC,+23087+Three+Notch+Road,+California,+MD+20619&output=embed",
   // DRAFT: use the Google place link for the reviews at launch.
   reviewsUrl:
     "https://www.google.com/search?q=Wood+%26+Ramiah+LLC+23087+Three+Notch+Road+California+MD+reviews",

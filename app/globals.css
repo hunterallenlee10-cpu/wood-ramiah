@@ -23,7 +23,11 @@
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
-    scroll-padding-top: 88px;
+  }
+  /* Anchor targets clear the sticky nav. (scroll-margin, not scroll-padding, so Next's
+     scroll-to-top on navigation still treats the top of the page as in view.) */
+  [id] {
+    scroll-margin-top: 88px;
   }
   @media (prefers-reduced-motion: no-preference) {
     html {
@@ -308,6 +312,35 @@
     opacity: 0;
     pointer-events: none;
   }
+}
+
+/* Matter Planner: overlay fade, panel rise, cross-fade between steps. */
+@keyframes planner-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes planner-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.planner-overlay {
+  animation: planner-fade 180ms ease-out both;
+}
+.planner-panel {
+  animation: planner-rise 220ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.planner-step {
+  animation: planner-fade 200ms ease-out both;
 }
 
 /* FAQ accordion marker */
